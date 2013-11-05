@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Quiz</title>
+    <!-- Load local jQuery. -->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <!-- Load local lib and tests. -->
+    <script src="quiz-jquery-plugin.js"></script>
+    <script src="answer-jquery-plugin.js"></script>
+    <script src="result-jquery-plugin.js"></script>
+    <!--<script src="runner.js"></script>
+    <script src="quiz-jquery-pluginM.js"></script>-->
+</head>
+<body>
+    <script>
+        $(document).ready(function()
+        {
+        $.getJSON("questions.json", function(data)
+        {
+        $(document).renderQuiz(data);
+        })
+        });
+    </script>
+    <div id="container">
+        <h3><span id=question></span></h3>
+        <p/>
+        <input id="answer_0" type="radio" name="group1" checked>
+        <label id="answer_text_0" for="answer_0"></label>
+        <p/>
+        <input id="answer_1" type="radio" name="group1">
+        <label id="answer_text_1" for="answer_1"></label>
+        <p/>
+        <input id="answer_2" type="radio" name="group1">
+        <label id="answer_text_2" for="answer_2"></label>
+        <p/>
+        <button id="next">Next</button>
+    </div>
+    <div id="resultContainer" class="style:none"/>
+</body>
+</html>
