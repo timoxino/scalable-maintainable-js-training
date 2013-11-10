@@ -1,26 +1,16 @@
 <html>
 <head>
-    <meta charset="utf-8">
     <title>Quiz</title>
-    <!-- Load local jQuery. -->
+    <!-- Load remote jQuery. -->
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <!-- Load local lib and tests. -->
-    <script src="quiz-jquery-plugin.js"></script>
-    <script src="answer-jquery-plugin.js"></script>
-    <script src="result-jquery-plugin.js"></script>
-    <!--<script src="runner.js"></script>
-    <script src="quiz-jquery-pluginM.js"></script>-->
+    <!-- Load local libs. -->
+    <script src="event-bus.js"></script>
+    <script src="quiz.js"></script>
+    <script src="result.js"></script>
+    <script src="answer.js"></script>
+    <script src="application.js"></script>
 </head>
 <body>
-    <script>
-        $(document).ready(function()
-        {
-        $.getJSON("questions.json", function(data)
-        {
-        $(document).renderQuiz(data);
-        })
-        });
-    </script>
     <div id="container">
         <h3><span id=question></span></h3>
         <p/>
